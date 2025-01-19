@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BeniYIKA</title>
+    <link rel="stylesheet" href="ee.css" />
+  </head>
+  <body>
+    <header>
+      <h1>BeniYIKA Ödeme Ekranı</h1>
+      <img src="images.jpeg" alt="yıkama_logo" />
+      <nav>
+        <ul>
+          <li><a href="AnaSayfa.html">Ana Sayfa</a></li>
+          <li><a href="Galeri.html">Galeri</a></li>
+          <li><a href="Hakkımızda.html">Hakkımızda</a></li>
+          <li><a href="İletişim.html">İletişim</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <form id="paymentForm">
+        <section class="birinciSection" id="birinciSectionid">
+          <h3>Dış Yıkama</h3>
+          <label
+            ><input type="radio" name="disYikama" value="300" /> Otomobil Dış
+            Yıkama (300.00TL)</label
+          ><br />
+          <label
+            ><input type="radio" name="disYikama" value="500" /> Kamyonet Dış
+            Yıkama (500.00TL)</label
+          ><br />
+          <label><input type="radio" name="disYikama" value="0" /> Diğer</label>
+        </section>
+
+        <section>
+          <h3>İç Dış Yıkama</h3>
+          <label
+            ><input type="radio" name="icDisYikama" value="500" /> Otomobil
+            İç-Dış Yıkama (500.00TL)</label
+          ><br />
+          <label
+            ><input type="radio" name="icDisYikama" value="750" /> Kamyonet
+            İç-Dış Yıkama (750.00TL)</label
+          >
+          <br />
+          <label
+            ><input type="radio" name="icDisYikama" value="0" /> Diğer</label
+          >
+        </section>
+
+        <section>
+          <h3>Detaylı Temizlik</h3>
+          <label
+            ><input type="checkbox" name="detayli" value="500" /> Pasta Cila
+            İşlemi (+500.00TL)</label
+          ><br />
+          <label
+            ><input type="checkbox" name="detayli" value="1000" /> Ozon
+            Temizliği (+1000.00TL)</label
+          ><br />
+          <label
+            ><input type="checkbox" name="detayli" value="250" /> Buharlı Halı
+            ve İç Yıkama (+250.00TL)</label
+          >
+        </section>
+
+        <section>
+          <h3>ÖDEME YÖNTEMİ</h3>
+          <label
+            ><input type="radio" name="odeme" value="-50" /> Nakit Ödemelerde
+            50.00TL İNDİRİM!</label
+          ><br />
+          <label
+            ><input type="radio" name="odeme" value="0.03" /> Kredi Kartı (%3
+            Komisyon)</label
+          >
+        </section>
+
+        <button type="button" onclick="hesapla()">FİYATI HESAPLA</button>
+        <p id="totalAmount"></p>
+      </form>
+
+      <pre>
+Fiyatlarımız yurt dışı ürün kullanımından dolayı dolar bazlıdır. Günlük olarak güncellenmektedir.
+      </pre>
+    </main>
+
+    <script src="edizjs.js"></script>
+  </body>
+</html>
